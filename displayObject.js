@@ -1,5 +1,5 @@
 
-		function book(title,author,page,){
+		function book(title,author,page){
 			this.title = title;
 			this.author = author;
 			this.page = page;
