@@ -1,4 +1,4 @@
-// In this code we create 3 objects and run as 3 types of creating objects 
+// In this code we create 3 objects and run as 3 different types of creating objects 
 
 
 //book1
