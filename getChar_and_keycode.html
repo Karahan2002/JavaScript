@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		p{
+			outline:1px solid #333;
+			margin:2rem;
+		}
+		input{
+			margin:2rem;
+		}
+		input:focus{
+			background: gold;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<input type="text" id="txt"/>
+	</p>
+
+
+	<script>
+		let log = console.log;
+
+		document.addEventListener("DOMContentLoaded",init);
+
+		function init(){
+			let txt = document.getElementById("txt");
+			txt.addEventListener("keydown",function(e){
+				let target = e.currentTarget;
+				let tag = target.tagName;
+				let char = e.char || e.charCode || e.which;
+				log(char,tag);
+				let s = String.fromCharCode(char);
+				log(s);
+			});
+		}		
+	</script>
+</body>
+</html>
